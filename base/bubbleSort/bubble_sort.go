@@ -1,8 +1,11 @@
 package main
+
 import "fmt"
+
 func main(){
     bubbleSort()
 }
+
 func bubbleSort(){
     a:= []int {3,5,2,7,4,1}
     for i:=0; i< 6; i++ {
