@@ -4,6 +4,7 @@ import "fmt"
 
 func main(){
     bubbleSort()
+    selectSort()
 }
 
 package main
@@ -28,7 +29,7 @@ func bubbleSort(){
     }
 }
 
-func bubbleSort(){
+func selectSort(){
     a:= []int {3,5,2,7,4,1}
     for i:=0; i< 6; i++ {
         flag := false
