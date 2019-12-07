@@ -26,6 +26,26 @@ func bubbleSort(){
 
 func selectSort(){
     a:= []int {3,5,2,7,4,1}
+    for i:=0; i< 6-1; i++ {
+        min := a[i]
+        minIndex := i
+        for j:=i+1; j<6; j++ {
+            if min > a[j] {
+                min = a[j]
+                minIndex = j
+            }
+        }
+        if minIndex != i {
+            a[minIndex] = a[i]
+            a[i] = min
+        }
+        fmt.Println(i,":",a)
+    }
+}
+
+/*
+func bubbleSort2(){
+    a:= []int {3,5,2,7,4,1}
     for i:=0; i< 6; i++ {
         flag := false
         for j:=i+1; j<6; j++ {
@@ -40,3 +60,4 @@ func selectSort(){
         fmt.Println(a)
     }
 }
+*/
