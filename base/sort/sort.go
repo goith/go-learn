@@ -9,7 +9,7 @@ func main(){
 
 func bubbleSort(){
     a:= []int {3,5,2,7,4,1}
-    for i:=0; i< 6; i++ {
+    for i:=0; i< 6-1; i++ {
         flag := false
         for j:=0; j<6-i-1; j++ {
             if a[j] > a[j+1] {
