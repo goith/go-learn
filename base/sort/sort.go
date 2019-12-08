@@ -5,6 +5,8 @@ import "fmt"
 func main(){
     bubbleSort()
     selectSort()
+    
+    insertSort()
 }
 
 func bubbleSort(){
@@ -61,3 +63,22 @@ func bubbleSort2(){
     }
 }
 */
+
+
+func insertSort(){
+    arr:= []int {3,1,2,7,6,4}
+    le :=len(arr)
+    for i:=1; i< le; i++ {
+        insertVal := arr[i]
+        insertIndex := i - 1
+        for insertIndex >= 0 && insertVal < arr[insertIndex] {
+            arr[insertIndex + 1] = arr[insertIndex]
+            insertIndex--
+        }
+        fmt.Println("........", arr)
+        if insertIndex + 1 != i {
+            arr[insertIndex + 1] = insertVal
+        }
+        fmt.Println(i,":",arr)
+    }
+}
