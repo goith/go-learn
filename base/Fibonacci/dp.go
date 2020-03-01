@@ -7,7 +7,28 @@ func main() {
 	//fmt.Println(F(0))
 	//fmt.Println(F(1))
 	//fmt.Println(F(2))
-	fmt.Println(F(6))
+	fmt.Println("F", F(6))
+	fmt.Println("F2", F2(6))
+}
+
+func F2(n int) (f int) {
+	if n <= 0 {
+		return 0
+	}
+	a := make([]int, n+1)
+	a[0] = 0
+	a[1] = 1
+
+	if n <= 1 {
+		return a[n]
+	}
+
+	for i := 2; i <= n; i++ {
+		a[i] = a[i-1] + a[i-2]
+	}
+
+	return a[n]
+
 }
 
 func F(i int) (f int) {
